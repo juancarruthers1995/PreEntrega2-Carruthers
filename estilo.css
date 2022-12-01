@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content   {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 20px;
+    
+}
+
+.header, .main, .aside, .footer {
+    padding: 20px;
+    
+}
+
+.header {
+    background: lightblue;
+    flex-basis: 60px;
+}
+
+nav {
+    background-color: white;
+    display:inline;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 7px solid red;
+}
+
+.logo_titulo {
+    display: flex;
+    justify-content: center;
+}
+
+nav div h1{
+    display: inline;
+    font-size: 50px;
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav ul li a {
+    color: black;
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+nav ul li a:hover{
+    background-color: red;
+}
+
+.carro_logo{
+    width: 40px;
+    height: 40px;
+}
+.main {
+    background: slateblue;
+    flex-basis: 300px;
+    flex-grow: 2;  
+    flex-shrink: 0;
+    background-image: url(./imagenes/fondo\ rayos.jpg);
+    background-repeat: repeat-y repeat-x;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.quienes_img{
+display: flex;
+justify-content: center;
+}
+
+.compraonline_img{
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    padding: 100px;
+    }
+
+.aside {
+    background: darkslateblue;
+    flex-basis: 200px;
+    flex-grow: 1;  
+    flex-shrink: 0;
+}
+
+.footer {
+    background: rgb(187, 13, 13);
+    text-align: center;
+    flex-grow: 0.0007;
+    
+}
+
+.imagen_redes {
+    width: 150px;
+    height: 25px;
+    float: left;
+    
+}
+
+.imagen_ubicacion {
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-right: 80px;
+}
+
+@media screen and (max-width: 768px) {
+.content {
+        flex-direction: row;
+        flex-wrap: wrap;     
+    }
+    
+
+.main , .aside {
+        height: 100%;
+        padding-top: 50px;
+    }
+
+nav {
+    background-color: red;
+    display:inline;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+nav div h1{
+    display: inline-block;
+    font-size: 30px;
+    
+}
+
+nav ul li a:hover{
+    background-color: white;
+}
+
+.logo_titulo {
+    display: flex;
+    justify-content: center;}
+
+nav ul li {
+    display: inline-block;
+}    
+
+nav ul li a {
+    font-size: 17px;
+}
+
+.header {
+        flex-basis: 100%;
+        max-height: 60px;
+    }
+
+.quienes_img{
+    display: flex;
+    justify-content: center;
+    height: 95%;
+    width: 95%;
+    padding-top: 10%;
+    }
+    
+.compraonline_img{
+    display: flex;
+    justify-content: center;
+    height: 85%;
+    width: 95%;
+    padding-top: 10%;
+        }
+
+ .footer {
+        flex-basis: 100%;
+    }
+}
